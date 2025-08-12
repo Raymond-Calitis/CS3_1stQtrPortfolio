@@ -1,6 +1,6 @@
 <script>
     const age = window.prompt("How old are you? (in years)", "0");
-    const maxAge = 100;
+    const maxAge = window.prompt("What is the maximum age you expect to reach? (in years)", "100");
     const numPerDay = window.prompt("How many grahams do you eat per day?", "0");
     
     var totalRequired = (numPerDay * 365) * (maxAge - age);
