@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Q1 2nd Graded Exercise submitted by Raymond Ashly C. Calitis of 9-Cesium</h2>
+
+    <p>Meal Price: <input type="number" id="mealPrice" step="0.01"></p>
+    <p>Tip: <input type="number" id="tip"></p>
+    <p>Service Charge: <input type="number" id="serviceCharge"></p>
+    
+    <button onclick="totalMeal()">Accept Input</button>
+    
+    <p id="totalMeal"></p>
+
+    <script>
+        function totalMeal() {
+            var mp = Number(document.getElementById("mealPrice").value);
+            var tip = Number(document.getElementById("tip").value);
+            var sc = Number(document.getElementById("serviceCharge").value);
+            
+            var totalCost = mp + tip + (sc / 100 * mp);
+            
+            document.getElementById("totalMeal").textContent = 
+                "Total Meal: " + totalCost.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
